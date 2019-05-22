@@ -3,9 +3,11 @@
 	<head>
 		<title>{% block title %}{% endblock %}</title>
 		<link href="{{ url_for( 'static', filename='css/main.css') }}" rel="stylesheet" type="text/css" media="all" />
+		<link href="{{ url_for( 'static', filename='bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" media="all" />
+		<script src="{{ url_for( 'static', filename='bootstrap/bootstrap.min.css') }}" type="text/javascript" ></script>
 	</head>	
 	<body>
-		<header id="header">
+		<header id="header" class="rounded">
 			<h1>The Booksssss <sub class="low-index">Powered by Python & CS50</sub> {% block heading %}{% endblock %}</h1>
 		</header>
 		
