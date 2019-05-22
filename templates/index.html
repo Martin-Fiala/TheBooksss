@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+	The Booksssss - Login
+{% endblock %}
+
+
+{% block heading %}
+	
+{% endblock %}
+
+
+{% block body %}
+	<div id="form">
+		<form action="{{ url_for('index') }}" method="post">
+			<input type="text" name="name" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<button>Login</button>
+		</form>
+	</div>
+{% endblock %}
