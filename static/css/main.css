@@ -17,12 +17,16 @@ body {
 }
 
 #header	{
-	height: 80px;
 	border: 2px solid grey;
 	box-shadow: 8px 8px 6px -10px rgba(0,0,0,0.68);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 20px;
+}
+
+#header>h1 {
+	flex-grow: 1;
 }
 
 .low-index {
@@ -44,10 +48,14 @@ body {
 	padding: 5px;
 }
 
-
-/***** Forms ******/
+#logout {
+	position: absolute;
+	right: 30px;
+}
 
 #form {
+	width: 33%;
 	min-width: 400px;
 	text-align: left;
+	margin-bottom: 50px;
 }

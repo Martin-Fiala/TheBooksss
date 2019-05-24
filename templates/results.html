@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+	The Booksssss - Results
+{% endblock %}
+
+
+{% block heading %}
+	<form id="logout" action="{{ url_for('logouthandler') }}">
+		<button type="submit" class="btn btn-outline-secondary">Log Out</button>
+	</form>
+{% endblock %}
+
+
+{% block css %}
+	
+{% endblock %}
+
+
+{% block body %}
+	<div id="form">
+		<form action="{{ url_for('searchhandler') }}" method="post">
+			<div>
+				<h3>Search ISBN, Title or Author:</h3>
+			</div>
+			<div class="form-group row">
+				<input class="rounded col-12 form-control" id="form-search" type="text" name="search" placeholder="ISBN, Title or Author..." required>
+			</div>
+			<div class="row">
+				<button class="btn btn-outline-secondary col-12">Search</button>
+			</div>
+		</form>
+	</div>
+	<ul class="list-group list-group-flush">
+		{% if results %}
+			{% for result in results %}
+				<li class="list-group-item">
+					<a href="#"> ( {{ result.isbn }} ) {{ result.title }} - {{ result.author }} - {{ result.year }}</a>
+				</li>
+			{% endfor %}
+		{% else %}
+			<li class="list-group-item">
+				Sorry, no matches for your search query ...
+			</li>
+		{% endif %}
+	</ul>
+{% endblock %}
